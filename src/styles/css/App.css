@@ -107,7 +107,7 @@ main {
           transform: translateY(-50%);
   font-size: 1.5em;
 }
-.App-menu .Accordion-menu .Content-box .active .Content-title::before {
+.App-menu .Accordion-menu .Content-box.active .Content-title::before {
   content: "-";
 }
 .App-menu .Accordion-menu .Content-box .Content-text {
@@ -119,7 +119,7 @@ main {
   transition: 0.5s;
   overflow-y: auto;
 }
-.App-menu .Accordion-menu .Content-box .active .Content-text {
+.App-menu .Accordion-menu .Content-box.active .Content-text {
   height: 15rem;
   padding: 1rem;
 }
