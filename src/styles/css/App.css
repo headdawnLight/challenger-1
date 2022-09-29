@@ -5,17 +5,6 @@ font-family: 'Roboto Serif', serif;
 **/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /** VARIABLES **/
-/** BRANDS  **/
-.Brands-buttons {
-  width: 3.5rem;
-  height: 3.5rem;
-  margin: 0.7rem 0;
-  border-radius: 1rem;
-  color: #000;
-  background-color: #fff;
-}
-
-/** POST CONTAINER **/
 /** GENERAL SETTINGS **/
 *,
 *::after,
@@ -56,23 +45,34 @@ main {
   font-weight: 500;
 }
 
-/**  APP BRANDS **/
-.App-brands {
+/**  APP NAVBAR **/
+.App-navbar {
+  position: absolute;
+  top: 5rem;
+  left: 0;
   width: 6rem;
-  height: auto;
+  height: 100%;
   background-color: #aaa;
-}
-.App-brands .Brand-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.App-navbar a {
+  font-size: 1rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: white;
 }
 
 /**  APP MENU **/
@@ -83,6 +83,45 @@ main {
   width: 24rem;
   height: auto;
   background-color: green;
+}
+.App-menu .Accordion-menu {
+  max-width: 100%;
+}
+.App-menu .Accordion-menu .Content-box {
+  position: relative;
+  margin: 1rem 2rem;
+}
+.App-menu .Accordion-menu .Content-box .Content-title {
+  position: relative;
+  padding: 1rem;
+  background-color: aqua;
+  color: black;
+  cursor: pointer;
+}
+.App-menu .Accordion-menu .Content-box .Content-title::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.5em;
+}
+.App-menu .Accordion-menu .Content-box .active .Content-title::before {
+  content: "-";
+}
+.App-menu .Accordion-menu .Content-box .Content-text {
+  position: relative;
+  background-color: white;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+.App-menu .Accordion-menu .Content-box .active .Content-text {
+  height: 15rem;
+  padding: 1rem;
 }
 
 /**  APP CONTENTS **/
@@ -241,8 +280,4 @@ main {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-.Post-card-container p {
-  font-size: 1.6rem;
-  margin: 0 2rem;
 }/*# sourceMappingURL=App.css.map */

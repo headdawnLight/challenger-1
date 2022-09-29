@@ -42,17 +42,26 @@ main {
   font-weight: 500;
 }
 
-/**  APP BRANDS **/
+/**  APP NAVBAR **/
 
-.App-brands {
+.App-navbar {
+  position: absolute;
+  top: 5rem;
+  left: 0;
   width: 6rem;
-  height: auto;
+  height: 100%;
   background-color: #aaa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 
-  .Brand-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  a {
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: white;
   }
 }
 
@@ -65,6 +74,50 @@ main {
   width: 24rem;
   height: auto;
   background-color: green;
+
+  .Accordion-menu {
+    max-width: 100%;
+  }
+
+  .Accordion-menu .Content-box {
+    position: relative;
+    margin: 1rem 2rem;
+  }
+
+  .Accordion-menu .Content-box .Content-title {
+    position: relative;
+    padding: 1rem;
+    background-color: aqua;
+    color: black;
+    cursor: pointer;
+  }
+
+  .Accordion-menu .Content-box .Content-title::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+  }
+
+  .Accordion-menu .Content-box .active .Content-title::before {
+    content: "-";
+  }
+
+  .Accordion-menu .Content-box .Content-text {
+    position: relative;
+    background-color: white;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+  }
+
+  .Accordion-menu .Content-box .active .Content-text {
+    height: 15rem;
+    padding: 1rem;
+  }
 }
 
 /**  APP CONTENTS **/
@@ -209,10 +262,5 @@ main {
       align-items: center;
       justify-content: space-evenly;
     }
-  }
-
-  p {
-    font-size: 1.6rem;
-    margin: 0 2rem;
   }
 }
