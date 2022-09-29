@@ -1,5 +1,51 @@
+/** FONTS 
+
+font-family: 'Roboto Serif', serif;
+
+**/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/** VARIABLES **/
+/** BRANDS  **/
+.Brands-buttons {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0.7rem 0;
+  border-radius: 1rem;
+  color: #000;
+  background-color: #fff;
+}
+
+/** POST CONTAINER **/
+/** GENERAL SETTINGS **/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  overflow: hidden;
+}
+
+/**  APP HEADER **/
 .App-header {
-  margin: -20px 0px 0px 50px;
+  position: relative;
+  width: 30rem;
+  height: 5rem;
+  font-size: 1.6rem;
+  padding-left: 6rem;
+  background-color: #ccc;
 }
 
 .App-title {
@@ -8,4 +54,195 @@
 
 .App-title-ex {
   font-weight: 500;
+}
+
+/**  APP BRANDS **/
+.App-brands {
+  width: 6rem;
+  height: auto;
+  background-color: #aaa;
+}
+.App-brands .Brand-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/**  APP MENU **/
+.App-menu {
+  position: absolute;
+  top: 5rem;
+  left: 6rem;
+  width: 24rem;
+  height: auto;
+  background-color: green;
+}
+
+/**  APP CONTENTS **/
+.App-contents {
+  position: absolute;
+  top: 0;
+  left: 30rem;
+  width: 100%;
+  height: auto;
+  background-color: yellow;
+}
+.App-contents .Post-container {
+  margin: 3rem;
+}
+.App-contents .Post-container .Post-status ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-columns: 5;
+     -moz-columns: 5;
+          columns: 5;
+  font-size: 2.2rem;
+  margin-left: 2rem;
+}
+.App-contents .Post-container .Status-text {
+  color: black;
+  font-size: 2rem;
+  margin-right: 5rem;
+}
+.App-contents .Post-container #Published {
+  color: gray;
+}
+.App-contents .Post-container #Scheduled {
+  color: green;
+}
+.App-contents .Post-container #Need-Approval {
+  color: orange;
+}
+.App-contents .Post-container #Error {
+  color: red;
+}
+.App-contents .Post-container #Notes {
+  color: blue;
+}
+
+/**  POST CARD CONTAINER **/
+.Post-card-container {
+  display: grid;
+  width: 45rem;
+  height: 55rem;
+  margin-bottom: 5rem;
+  grid-template-areas: "Post-card-status Post-card-head Post-card-head" "Post-card-status Post-card-body Post-card-body" "Post-card-status Post-card-foot Post-card-foot";
+  grid-template-columns: 5rem 20rem 20rem;
+  grid-template-rows: 5rem 43rem 7rem;
+  background-color: blue;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+.Post-card-container .Post-card-status {
+  grid-area: Post-card-status;
+  background-color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.Post-card-container .Post-card-status .Post-card-channel {
+  width: 100%;
+  text-align: center;
+}
+.Post-card-container .Post-card-head {
+  grid-area: Post-card-head;
+  background-color: orange;
+}
+.Post-card-container .Post-card-head .Post-card-date {
+  float: left;
+  width: 20rem;
+  height: 5rem;
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.Post-card-container .Post-card-head .Post-card-actions {
+  float: right;
+  width: 20rem;
+  height: 5rem;
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.Post-card-container .Post-card-body {
+  grid-area: Post-card-body;
+  background-color: purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.Post-card-container .Post-card-body .Post-card-text {
+  width: 40rem;
+  height: auto;
+  background-color: red;
+}
+.Post-card-container .Post-card-body .Post-card-media {
+  background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40rem;
+  height: auto;
+  padding: 2rem;
+}
+.Post-card-container .Post-card-body .Post-card-media img {
+  max-width: 100%;
+  height: auto;
+}
+.Post-card-container .Post-card-foot {
+  grid-area: Post-card-foot;
+  background-color: brown;
+}
+.Post-card-container .Post-card-foot .Post-card-stats {
+  background-color: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.Post-card-container p {
+  font-size: 1.6rem;
+  margin: 0 2rem;
 }/*# sourceMappingURL=App.css.map */
