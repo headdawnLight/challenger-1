@@ -48,7 +48,7 @@ main {
   position: absolute;
   top: 5rem;
   left: 0;
-  width: 6rem;
+  width: 7rem;
   height: 100%;
   background-color: #aaa;
   display: flex;
@@ -58,8 +58,9 @@ main {
 
   a {
     font-size: 1rem;
-    margin: 1rem 0;
-    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.8rem 1rem;
     border-radius: 1rem;
     background-color: white;
   }
@@ -70,42 +71,65 @@ main {
 .App-menu {
   position: absolute;
   top: 5rem;
-  left: 6rem;
-  width: 24rem;
+  left: 7rem;
+  width: 23rem;
   height: auto;
-  background-color: green;
+  background-color: black;
+  color: white;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 1rem;
+  }
+
+  .Notifications-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem;
+
+    .Num-box {
+      font-size: 1.5rem;
+      margin-left: 1.5rem;
+      padding: 0rem 1rem;
+      border: 1px solid aqua;
+      border-radius: 0.5rem;
+    }
+  }
 
   .Accordion-menu {
     max-width: 100%;
   }
 
-  .Accordion-menu .Content-box {
+  .Accordion-menu .Menu-box {
     position: relative;
-    margin: 1rem 2rem;
   }
 
-  .Accordion-menu .Content-box .Content-title {
+  .Accordion-menu .Menu-box .Menu-box-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     position: relative;
-    padding: 1rem;
-    background-color: aqua;
-    color: black;
+    padding: 2rem;
     cursor: pointer;
   }
 
-  .Accordion-menu .Content-box .Content-title::before {
+  .Accordion-menu .Menu-box .Menu-box-title::before {
     content: "+";
     position: absolute;
     top: 50%;
     right: 2rem;
-    transform: translateY(-50%);
-    font-size: 1.5em;
+    transform: translateY(-60%);
+    font-size: 3rem;
   }
 
-  .Accordion-menu .Content-box.active .Content-title::before {
+  .Accordion-menu .Menu-box.active .Menu-box-title::before {
     content: "-";
+    font-size: 4rem;
   }
 
-  .Accordion-menu .Content-box .Content-text {
+  .Accordion-menu .Menu-box .Menu-box-content {
     position: relative;
     background-color: white;
     height: 0;
@@ -114,9 +138,16 @@ main {
     overflow-y: auto;
   }
 
-  .Accordion-menu .Content-box.active .Content-text {
-    height: 15rem;
-    padding: 1rem;
+  .Accordion-menu .Menu-box.active .Menu-box-content {
+    height: auto;
+  }
+
+  .Menu-box-list {
+    li {
+      font-size: 1.5rem;
+      color: red;
+      margin: 2rem 4.5rem;
+    }
   }
 }
 
