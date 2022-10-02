@@ -1,6 +1,6 @@
 import AppHeader from "./AppHeader";
 import AppNavbar from "./AppNavbar";
-import AppMenu from "./AppMenu";
+import AppMenu from "./AppMenu/AppMenu";
 import AppContents from "./AppContents";
 import "../styles/css/App.css";
 

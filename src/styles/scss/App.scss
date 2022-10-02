@@ -20,18 +20,25 @@ body {
 }
 
 main {
-  overflow: hidden;
+  position: relative;
 }
 
 /**  APP HEADER **/
 
 .App-header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 30rem;
-  height: 5rem;
+  height: 6rem;
   font-size: 1.6rem;
-  padding-left: 6rem;
-  background-color: #ccc;
+  padding-left: 7rem;
+  background-color: rgba($color: #ddd, $alpha: 0.9);
+  color: #000;
+}
+
+h1 {
+  margin-top: 0.5rem;
 }
 
 .App-title {
@@ -46,11 +53,12 @@ main {
 
 .App-navbar {
   position: absolute;
-  top: 5rem;
+  top: 6rem;
   left: 0;
   width: 7rem;
-  height: 100%;
-  background-color: #aaa;
+  height: 100vh;
+  background-color: rgba($color: #000, $alpha: 0.9);
+  border-right: 1px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +70,14 @@ main {
     margin-bottom: 0.5rem;
     padding: 0.8rem 1rem;
     border-radius: 1rem;
+    opacity: 0.5;
     background-color: white;
+    color: black;
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
   }
 }
 
@@ -70,16 +85,16 @@ main {
 
 .App-menu {
   position: absolute;
-  top: 5rem;
+  top: 6rem;
   left: 7rem;
   width: 23rem;
-  height: auto;
-  background-color: black;
+  height: 100vh;
+  background-color: rgba($color: #333, $alpha: 0.9);
   color: white;
 
   h2 {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0 1rem;
   }
 
@@ -91,9 +106,9 @@ main {
 
     .Num-box {
       font-size: 1.5rem;
-      margin-left: 1.5rem;
+      margin-left: 1.2rem;
       padding: 0rem 1rem;
-      border: 1px solid aqua;
+      border: 1px solid white;
       border-radius: 0.5rem;
     }
   }
@@ -131,7 +146,7 @@ main {
 
   .Accordion-menu .Menu-box .Menu-box-content {
     position: relative;
-    background-color: white;
+    background-color: rgba($color: #000, $alpha: 0.7);
     height: 0;
     overflow: hidden;
     transition: 0.5s;
@@ -145,8 +160,18 @@ main {
   .Menu-box-list {
     li {
       font-size: 1.5rem;
-      color: red;
+      font-weight: 500;
       margin: 2rem 4.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover,
+      &:active {
+        color: #f22;
+      }
     }
   }
 }
