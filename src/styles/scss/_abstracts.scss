@@ -8,7 +8,49 @@ font-family: 'Roboto Serif', serif;
 
 /** VARIABLES **/
 
-$primary-font: "Roboto", sans-serif;
-$theme-color: #000;
-$light-color: #fff;
-$dark-color: #000;
+/** FONT **/
+
+$primary-font-family: "Roboto", sans-serif;
+$black-font: #000;
+$white-font: #fff;
+$gray-font: #888;
+
+/** THEME **/
+
+$body-theme: rgba(
+  $color: #eee,
+  $alpha: 0.8,
+);
+
+$light-theme: rgba(
+  $color: #ddd,
+  $alpha: 0.9,
+);
+
+$dark-theme: rgba(
+  $color: #111,
+  $alpha: 1,
+);
+
+/** BORDER COLOR **/
+$box-shadow: 2px 0px 2px #666;
+
+/** BORDER COLOR **/
+
+$white-border: #fff;
+$black-border: #000;
+$light-border: #e3e3e3;
+
+/** ANCHOR COLOR **/
+
+$light-link: #fff;
+$dark-link: #000;
+$red-link: #f00;
+
+/** STATUS COLOR **/
+
+$Published: #808080;
+$Scheduled: #008000;
+$Need-Approval: #ffa500;
+$Error: #ff0000;
+$Notes: #0000ff;
