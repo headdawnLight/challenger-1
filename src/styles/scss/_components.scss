@@ -42,7 +42,7 @@
   font-size: 3rem;
 
   @include media(medium) {
-    left: 16.5rem;
+    left: 17rem;
   }
 }
 
@@ -74,6 +74,11 @@
 
   @include media(medium) {
     margin-right: 0;
+  }
+
+  @include media(small) {
+    transform: scale(0.8);
+    margin-top: -3rem;
   }
 
   .Post-card-container {
