@@ -9,27 +9,27 @@ const AppNavbar = () => {
   return (
     <nav className="App-navbar">
       <a className="Navbar-link" href="#0">
-        <FacebookIcon fontSize="large" />
+        <FacebookIcon sx={{ fontSize: 35 }} />
       </a>
 
       <a className="Navbar-link" href="#1">
-        <InstagramIcon fontSize="large" />
+        <InstagramIcon sx={{ fontSize: 35 }} />
       </a>
 
       <a className="Navbar-link" href="#2">
-        <TwitterIcon fontSize="large" />
+        <TwitterIcon sx={{ fontSize: 35 }} />
       </a>
 
       <a className="Navbar-link" href="#3">
-        <RedditIcon fontSize="large" />
+        <RedditIcon sx={{ fontSize: 35 }} />
       </a>
 
-      <a className="Navbar-link" href="#4">
-        <TelegramIcon fontSize="large" />
+      <a className="Navbar-link" href="#3">
+        <TelegramIcon sx={{ fontSize: 35 }} />
       </a>
 
       <a className="Navbar-link" href="#5">
-        <WhatsAppIcon fontSize="large" />
+        <WhatsAppIcon sx={{ fontSize: 35 }} />
       </a>
     </nav>
   );

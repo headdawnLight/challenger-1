@@ -7,10 +7,11 @@ font-family: 'Roboto Serif', serif;
 /** VARIABLES **/
 /** FONT **/
 /** THEME **/
-/** BORDER COLOR **/
+/** SHADOW **/
 /** BORDER COLOR **/
 /** ANCHOR COLOR **/
 /** STATUS COLOR **/
+/** MIXINS **/
 /**  ACCORDION MENU **/
 .Accordion-menu {
   max-width: 100%;
@@ -35,6 +36,23 @@ font-family: 'Roboto Serif', serif;
   padding: 1rem;
 }
 
+.Menu-box.active {
+  background-color: #e66;
+}
+
+.Menu-box.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3.6rem;
+  left: 1.6rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #e66;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 .Menu-box-title::before {
   content: "+";
   cursor: pointer;
@@ -44,6 +62,11 @@ font-family: 'Roboto Serif', serif;
   top: 50%;
   right: 2rem;
   font-size: 3rem;
+}
+@media (max-width: 780px) {
+  .Menu-box-title::before {
+    left: 16.5rem;
+  }
 }
 
 .Menu-box.active .Menu-box-title::before {
@@ -56,11 +79,12 @@ font-family: 'Roboto Serif', serif;
   overflow: hidden;
   overflow-y: auto;
   height: 0;
-  background-color: #111111;
+  background-color: #333;
 }
 
 .Menu-box.active .Menu-box-content {
   height: auto;
+  border: 1px solid #333;
 }
 
 /**  POST CARD **/
@@ -69,6 +93,11 @@ font-family: 'Roboto Serif', serif;
   height: 50rem;
   margin-right: 4rem;
   margin-bottom: 5rem;
+}
+@media (max-width: 780px) {
+  .Post-card {
+    margin-right: 0;
+  }
 }
 .Post-card .Post-card-container {
   display: -webkit-box;
@@ -98,7 +127,7 @@ font-family: 'Roboto Serif', serif;
   border-end-start-radius: 5px;
 }
 .Post-card .Post-card-container .Post-card-status .Post-card-channel {
-  color: #fff;
+  color: #eee;
   width: 100%;
   text-align: center;
 }
@@ -232,7 +261,7 @@ html {
 }
 
 body {
-  color: #000;
+  color: #333;
   background-color: rgba(238, 238, 238, 0.8);
 }
 
@@ -246,20 +275,32 @@ body {
 .App-header {
   position: fixed;
   top: 0;
-  left: 7rem;
-  width: 23rem;
+  left: 6rem;
+  width: 24rem;
   height: 6rem;
   font-size: 1.6rem;
   text-align: center;
   border-bottom: 1px solid #fff;
-  background-color: #111111;
+  background-color: rgba(17, 17, 17, 0.8);
   -webkit-box-shadow: 2px 0px 2px #666;
           box-shadow: 2px 0px 2px #666;
-  color: #fff;
+  color: #eee;
+}
+@media (max-width: 780px) {
+  .App-header {
+    position: absolute;
+    width: 100%;
+    text-align: start;
+  }
 }
 
 h1 {
   margin-top: 0.5rem;
+}
+@media (max-width: 780px) {
+  h1 {
+    margin-left: 1.5rem;
+  }
 }
 
 .App-title {
@@ -275,7 +316,7 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 7rem;
+  width: 6rem;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,34 +331,67 @@ h1 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background-color: #111111;
+  background-color: rgba(0, 0, 0, 0.9);
   border-right: 1px solid #fff;
 }
+@media (max-width: 780px) {
+  .App-navbar {
+    position: absolute;
+    height: 42rem;
+  }
+}
 .App-navbar a {
-  font-size: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  padding: 0.8rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 1rem 2rem 0.5rem 1rem;
   border-radius: 1rem;
   opacity: 0.5;
-  color: #000;
-  background-color: #fff;
+  color: #fff;
+  -webkit-tap-highlight-color: transparent;
 }
 .App-navbar a:hover, .App-navbar a:active {
   opacity: 1;
+}
+.App-navbar a:hover::before, .App-navbar a:active::before {
+  opacity: 1;
+}
+.App-navbar a::before {
+  content: "";
+  position: relative;
+  top: 0;
+  right: 2rem;
+  width: 2rem;
+  height: 100%;
+  margin-right: -1.2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  opacity: 0;
 }
 
 /**  APP MENU **/
 .App-menu {
   position: fixed;
   top: 6rem;
-  left: 7rem;
-  width: 23rem;
+  left: 6rem;
+  width: 24rem;
   height: 100%;
-  background-color: #111111;
+  background-color: rgba(34, 34, 34, 0.8);
   -webkit-box-shadow: 2px 0px 2px #666;
           box-shadow: 2px 0px 2px #666;
-  color: #fff;
+  color: #eee;
+}
+@media (max-width: 780px) {
+  .App-menu {
+    position: absolute;
+    height: 36rem;
+    width: 100%;
+    z-index: 10;
+  }
 }
 .App-menu h2 {
   margin: 0 1rem;
@@ -339,10 +413,15 @@ h1 {
 }
 .App-menu .Notifications-box .Num-box {
   font-size: 1.5rem;
-  margin-left: 2.5rem;
+  margin-left: 3.5rem;
   padding: 0rem 1rem;
   border: 1px solid #fff;
   border-radius: 0.5rem;
+}
+@media (max-width: 780px) {
+  .App-menu .Notifications-box .Num-box {
+    margin-left: 0;
+  }
 }
 .App-menu .Menu-box-list li {
   color: #fff;
@@ -355,7 +434,7 @@ h1 {
 }
 .App-menu .Menu-box-list a:hover, .App-menu .Menu-box-list a:active {
   font-weight: 500;
-  color: #f00;
+  color: #f66;
 }
 
 /**  APP CONTENTS **/
@@ -364,10 +443,23 @@ h1 {
   top: 0;
   left: 30rem;
 }
+@media (max-width: 780px) {
+  .App-contents {
+    width: 100%;
+    height: 100%;
+    top: 42rem;
+    left: 0;
+  }
+}
 .App-contents .Post-container {
-  width: auto;
-  height: auto;
-  margin: 3rem 4rem;
+  margin: 3rem 0 3rem 4rem;
+}
+@media (max-width: 480px) {
+  .App-contents .Post-container {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    margin: -28rem 0 0 -1.2rem;
+  }
 }
 .App-contents .Post-container .Post-date-time {
   min-width: 100%;
@@ -376,42 +468,96 @@ h1 {
   margin: 2rem 0;
   font-size: 2rem;
 }
-.App-contents .Post-container .Post-status .Post-status-list {
-  -webkit-columns: 5;
-     -moz-columns: 5;
-          columns: 5;
+@media (max-width: 780px) {
+  .App-contents .Post-container .Post-date-time {
+    text-align: center;
+  }
+}
+.App-contents .Post-container .Post-status {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 2rem;
-  margin-left: 2rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 1.5rem;
 }
-.App-contents .Post-container .Status-text {
-  font-size: 1.5rem;
-  margin-right: 3rem;
-  color: #000;
+@media (max-width: 780px) {
+  .App-contents .Post-container .Post-status {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 3.5rem;
+  }
 }
-.App-contents .Post-container #Published {
-  color: #808080;
-  margin-left: 1rem;
+.App-contents .Post-container .Post-status .Status-text {
+  font-size: 1.4rem;
+  margin-right: 2.5rem;
+  color: #333;
 }
-.App-contents .Post-container #Scheduled {
-  color: #008000;
-  margin-left: 1rem;
+.App-contents .Post-container .Post-status #Published::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #808080;
 }
-.App-contents .Post-container #Need-Approval {
-  color: #ffa500;
-  margin-left: 1rem;
+.App-contents .Post-container .Post-status #Scheduled::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #008000;
 }
-.App-contents .Post-container #Error {
-  color: #ff0000;
-  margin-left: 1rem;
+.App-contents .Post-container .Post-status #Need-Approval::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ffa500;
 }
-.App-contents .Post-container #Notes {
-  color: #0000ff;
-  margin-left: 1rem;
+.App-contents .Post-container .Post-status #Error::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ff0000;
+}
+.App-contents .Post-container .Post-status #Notes::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #0000ff;
 }
 .App-contents .Post-cards {
   display: -webkit-box;
@@ -423,4 +569,20 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+@media (max-width: 780px) {
+  .App-contents .Post-cards {
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }/*# sourceMappingURL=App.css.map */
