@@ -47,8 +47,13 @@
 }
 
 .Menu-box.active .Menu-box-title::before {
-  content: "-";
-  font-size: 4rem;
+  content: "_";
+  top: 25%;
+  right: 2.5rem;
+
+  @include media(medium) {
+    right: 1.5rem;
+  }
 }
 
 .Menu-box-content {
@@ -56,6 +61,9 @@
   overflow: hidden;
   overflow-y: auto;
   height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: #333;
 }
 
@@ -79,6 +87,7 @@
   @include media(small) {
     transform: scale(0.8);
     margin-top: -3rem;
+    margin-bottom: 2rem;
   }
 
   .Post-card-container {
