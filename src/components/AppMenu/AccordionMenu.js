@@ -18,7 +18,11 @@ const AccordionMenu = () => {
   return (
     <div className="Accordion-menu">
       <div key={1} className={selected === 1 ? "Menu-box active" : "Menu-box"}>
-        <div className="Menu-box-title" onClick={() => toggle(1)}>
+        <div
+          className="Menu-box-title"
+          onClick={() => toggle(1)}
+          data-testid="1"
+        >
           <QueryStatsIcon fontSize="large" />
           <h2>SUMMARY</h2>
         </div>
@@ -31,7 +35,11 @@ const AccordionMenu = () => {
       </div>
 
       <div key={2} className={selected === 2 ? "Menu-box active" : "Menu-box"}>
-        <div className="Menu-box-title" onClick={() => toggle(2)}>
+        <div
+          className="Menu-box-title"
+          onClick={() => toggle(2)}
+          data-testid="2"
+        >
           <PublishedWithChangesIcon fontSize="large" />
           <h2>PUBLISH</h2>
         </div>
@@ -47,7 +55,11 @@ const AccordionMenu = () => {
       </div>
 
       <div key={3} className={selected === 3 ? "Menu-box active" : "Menu-box"}>
-        <div className="Menu-box-title" onClick={() => toggle(3)}>
+        <div
+          className="Menu-box-title"
+          onClick={() => toggle(3)}
+          data-testid="3"
+        >
           <ForumIcon fontSize="large" />
           <h2>ENGAGE</h2>
         </div>
@@ -59,7 +71,11 @@ const AccordionMenu = () => {
       </div>
 
       <div key={4} className={selected === 4 ? "Menu-box active" : "Menu-box"}>
-        <div className="Menu-box-title" onClick={() => toggle(4)}>
+        <div
+          className="Menu-box-title"
+          onClick={() => toggle(4)}
+          data-testid="4"
+        >
           <EarbudsIcon fontSize="large" />
           <h2>LISTEN</h2>
         </div>
@@ -72,7 +88,11 @@ const AccordionMenu = () => {
       </div>
 
       <div key={5} className={selected === 5 ? "Menu-box active" : "Menu-box"}>
-        <div className="Menu-box-title" onClick={() => toggle(5)}>
+        <div
+          className="Menu-box-title"
+          onClick={() => toggle(5)}
+          data-testid="5"
+        >
           <AssessmentIcon fontSize="large" />
           <h2>REPORT</h2>
         </div>
