@@ -4,6 +4,6 @@ import AppHeader from "../components/AppHeader";
 test("renders the heading part", () => {
   render(<AppHeader />);
 
-  // ASSERT
-  expect(screen.getByText("sociality"));
+  //assertion
+  expect(screen.getByRole("heading").textContent).toBe("sociality.io");
 });
