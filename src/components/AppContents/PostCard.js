@@ -28,10 +28,10 @@ const PostCard = ({ data, date, post }) => {
           </div>
 
           <div className="Post-card-actions">
-            <button className="Actions-buttons">
+            <button className="Actions-buttons" data-testid="act-btn-1">
               <RemoveCircleIcon fontSize="large" />
             </button>
-            <button className="Actions-buttons">
+            <button className="Actions-buttons" data-testid="act-btn-2">
               <PendingIcon fontSize="large" />
             </button>
           </div>
