@@ -27,6 +27,7 @@ describe("Should render <PostCard/> and test the click event of the buttons", ()
 
     //assertions
     expect(buttonClicked).toHaveBeenCalledTimes(0);
+    expect(button.getAttribute("class")).toContain("Actions-buttons");
   });
 
   test("tests the click event of the act-btn-2", async () => {
@@ -47,5 +48,6 @@ describe("Should render <PostCard/> and test the click event of the buttons", ()
 
     //assertions
     expect(buttonClicked).toHaveBeenCalledTimes(0);
+    expect(button.getAttribute("class")).toContain("Actions-buttons");
   });
 });
