@@ -23,6 +23,7 @@ describe("Should render <PostCard/> and test the click event of the buttons", ()
     );
 
     const button = screen.getAllByTestId("act-btn-1")[0];
+
     await userEvent.click(button);
 
     //assertions
@@ -49,5 +50,20 @@ describe("Should render <PostCard/> and test the click event of the buttons", ()
     //assertions
     expect(buttonClicked).toHaveBeenCalledTimes(0);
     expect(button.getAttribute("class")).toContain("Actions-buttons");
+  });
+
+  test("img must have an alt attribute = 'post_img'", () => {
+    //render PostCard
+    render(
+      <AppContextProvider>
+        <AppContents>
+          <PostCard />
+        </AppContents>
+      </AppContextProvider>
+    );
+
+    //assertions
+    const img = screen.getAllByRole("img")[0];
+    expect(img.getAttribute("alt")).toContain("post_img");
   });
 });
