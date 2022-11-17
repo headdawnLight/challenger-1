@@ -1,0 +1,12 @@
+.app-navigation {
+  width: 275px;
+  position: fixed;
+}
+
+@media screen and (max-width: 970px) {
+  .app-navigation {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+  }
+}

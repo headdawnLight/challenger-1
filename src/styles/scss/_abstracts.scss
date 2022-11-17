@@ -1,80 +1,27 @@
-/** FONTS 
-
-font-family: 'Roboto Serif', serif;
-
-**/
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-/** VARIABLES **/
-
-/** FONT **/
+/** FONT FAMILY **/
 
 $primary-font-family: "Roboto", sans-serif;
-$black-font: #333;
-$white-font: #eee;
-$gray-font: #888;
 
-/** THEME **/
+/** THEME COLOR **/
 
-$body-theme: rgba(
-  $color: #eee,
-  $alpha: 0.8,
-);
+$body-theme: #f5f7f8;
 
-$header-theme: rgba(
-  $color: #111,
-  $alpha: 0.8,
-);
+$nav-logo-theme: #31363b;
 
-$menu-theme: rgba(
-  $color: #222,
-  $alpha: 0.8,
-);
+$nav-menu-theme: #393d42;
 
-$navbar-theme: rgba(
-  $color: #000,
-  $alpha: 0.9,
-);
-
-/** SHADOW **/
-$box-shadow: 2px 0px 2px #666;
+$nav-bar-theme: #2a2f33;
 
 /** BORDER COLOR **/
 $white-border: #fff;
 $black-border: #000;
 $light-border: #e3e3e3;
 
-/** ANCHOR COLOR **/
-$light-link: #fff;
-$dark-link: #000;
-$red-link: #f66;
-
 /** STATUS COLOR **/
-$Published: #808080;
-$Scheduled: #008000;
-$Need-Approval: #ffa500;
-$Error: #ff0000;
-$Notes: #0000ff;
-
-/** MIXINS **/
-
-@mixin media($screensize) {
-  @if ($screensize == large) {
-    @media (max-width: 992px) {
-      @content;
-    }
-  }
-
-  @if ($screensize == medium) {
-    @media (max-width: 780px) {
-      @content;
-    }
-  }
-
-  @if ($screensize == small) {
-    @media (max-width: 480px) {
-      @content;
-    }
-  }
-}
+$Published: #acacac;
+$Scheduled: #3ac183;
+$Need-Approval: #f7bf38;
+$Error: #fb6450;
+$Notes: #67b1f2;

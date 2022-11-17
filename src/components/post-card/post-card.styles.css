@@ -1,0 +1,80 @@
+.post-card-container {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: 1px solid #e5e6ee;
+}
+
+.post-card-parts {
+  display: flex;
+  flex-direction: column;
+  width: 328px;
+  height: 425px;
+  padding: 0 22px;
+}
+
+.post-card-head {
+  margin-top: 25px;
+}
+
+.post-card-date {
+  float: left;
+  color: #acacac;
+}
+
+.post-card-acts {
+  float: right;
+}
+
+.act-btn {
+  cursor: pointer;
+  border: none;
+  color: #a8a8a8;
+  background-color: #ffffff;
+  margin-left: 15px;
+}
+
+.post-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card-text {
+  color: #959595;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.post-card-media {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.post-card-media img {
+  max-width: 280px;
+  max-height: 240px;
+  border: 1px solid #eaf0ef;
+}
+
+.post-card-foot {
+  margin-top: 20px;
+}
+
+.post-card-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-icon {
+  color: #a8a8a8;
+}
+
+.stats-text {
+  color: #575757;
+  font-size: 12px;
+  margin: 0 15px 0 5px;
+}

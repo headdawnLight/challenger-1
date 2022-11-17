@@ -1,0 +1,66 @@
+.post-status {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-status span {
+  color: #656666;
+  margin: 23px 18px 35px 20px;
+}
+
+.post-status span::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 17px;
+  right: 19px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+}
+
+#Published::before {
+  background-color: #acacac;
+}
+
+#Scheduled::before {
+  background-color: #3ac183;
+}
+
+#Need-Approval::before {
+  background-color: #f7bf38;
+}
+
+#Error::before {
+  background-color: #fb6450;
+}
+
+#Notes::before {
+  background-color: #67b1f2;
+}
+
+@media screen and (max-width: 970px) {
+  .post-status {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .post-status {
+    transform: scale(0.8);
+  }
+
+  .post-status span {
+    margin: 10px 18px 15px 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .post-status {
+    flex-direction: column;
+  }
+
+  .post-status span {
+    margin: 0;
+  }
+}

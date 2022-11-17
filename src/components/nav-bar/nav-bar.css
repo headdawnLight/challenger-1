@@ -1,0 +1,36 @@
+.nav-bar {
+  width: 67px;
+  height: 100%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2a2f33;
+}
+
+.nav-bar .inactive img {
+  width: 37px;
+  height: 37px;
+  opacity: 0.2;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.nav-bar .active img {
+  width: 37px;
+  height: 37px;
+  opacity: 1;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.nav-bar .active::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  width: 15px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: #f55661;
+  opacity: 1;
+}

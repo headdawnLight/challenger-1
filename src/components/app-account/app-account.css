@@ -1,0 +1,17 @@
+.app-account {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+
+.app-account img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 970px) {
+  .app-account {
+    display: none;
+  }
+}
