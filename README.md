@@ -10,15 +10,16 @@ Sample sociality.io user interface:
 ![design](https://user-images.githubusercontent.com/82842186/194529967-c5ceffcd-48af-4057-9961-6e43b3f15633.png)
 
 Clone sociality.io user interface:
-![2022-10-07_12-30-23](https://user-images.githubusercontent.com/82842186/194527969-82b2023f-487f-4143-879a-a52034961e32.png)
+![2022-11-17_18-10-36](https://user-images.githubusercontent.com/82842186/202483780-e1b929cf-3473-4ba2-a1e2-52bfc79ae051.png)
 
 Technology and tools I used while developing this program:
 
 - Microsoft Visual Studio Code
 - HTML, CSS, JS, SCSS
-- React.js
+- React.js (Hooks, Routers, Context API)
 - Momentjs
 - Material-ui
+- Jest, RTL
 - Git
 - GitHub
 - Netlify
