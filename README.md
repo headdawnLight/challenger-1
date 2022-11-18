@@ -1,28 +1,30 @@
-# sociality.io ui-clone-challenge
+# clone-web-ui-project
 
-website link: https://frabjous-puffpuff-dc67ee.netlify.app/
+This is a clone web user interface project. The clone ui was created by targeting ui design.
 
-## Introduction
+## ui design: [download psd format](https://drive.google.com/file/d/1wAbBsTrUkcf_g90FbkyMCzzEZbOR8OuP/view)
 
-This is a sociality.io UI clone project. A clone UI was created by targeting the sample UI.
-
-Sample sociality.io user interface:
-![design](https://user-images.githubusercontent.com/82842186/194529967-c5ceffcd-48af-4057-9961-6e43b3f15633.png)
-
-Clone sociality.io user interface:
+## clone ui: [click live link](https://frabjous-puffpuff-dc67ee.netlify.app/)
 ![2022-11-17_18-10-36](https://user-images.githubusercontent.com/82842186/202483780-e1b929cf-3473-4ba2-a1e2-52bfc79ae051.png)
 
-Technology and tools I used while developing this program:
+Technology and tools I used while developing this clone:
 
-- Microsoft Visual Studio Code
-- HTML, CSS, JS, SCSS
-- React.js (Hooks, Routers, Context API)
-- Momentjs
-- Material-ui
-- Jest, RTL
-- Git
-- GitHub
-- Netlify
+* Microsoft Visual Studio Code
+* HTML, CSS, JS, SCSS
+* React.js (Hooks, Router, Context API)
+  * The project was developed with React.js.
+  * React router is used for page layout and navigation.
+  * Context API has been created for data and state management.
+* Momentjs
+  * The momentjs library was used to change the date format.
+* Material-ui
+  * The material-ui css framework was used for the new icons.
+* Jest, RTL
+  * React Testing Library and jest was used to test react components.
+* Git, GitHub, Netlify
+  * The project was created and managed with the git version control system.
+  * An open source repository has been created on GitHub for the project.
+  * Web application deployment of the project was provided with netlify.
 
 ## License
 
